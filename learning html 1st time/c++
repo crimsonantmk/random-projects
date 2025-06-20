@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Shopping List" << endl;
+    cout << "1 Colgate Toothpaste 150ksh" << endl; 
+    cout << "1 Kiwi 200ksh" << endl;
+    cout << "Sweets 30" << endl;
+    cout << "Blueband 500" << endl;
+    cout << "Shirt 200" << endl;
+    cout << "Sugar 150" << endl;
+    cout << "Maize meal 200" << endl;
+    cout << "Flour 200" << endl;
+    cout << "Crocks 300" << endl;
+    cout << "Hat 200" << endl;
+    cout << "Tisue 60" ;
+    
+  return 0;
+}

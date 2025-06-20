@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace
+int main (){
+
+# Get temperature input from the user
+temperature = float(input("Enter the temperature in degrees Fahrenheit: "))
+
+# Check if the temperature is over 100 degrees
+if temperature > 100:
+    print("Warning: High temperature!")
+else:
+    print("Temperature is normal.")
+
+    return 0
+}
