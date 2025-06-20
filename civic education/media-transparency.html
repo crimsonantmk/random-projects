@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media and Transparency in Kenyan Government</title>
+  <style>
+    /* Styling for the overall page */
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    /* Content styling */
+    .content {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    h1 {
+      color: #c00;
+    }
+
+    h2 {
+      color: #555;
+    }
+
+    .media-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      margin-top: 40px;
+    }
+
+    .media-item {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .media-item img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .media-item h3 {
+      margin-bottom: 10px;
+    }
+
+    .media-modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .media-modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .nav-button {
+      background-color: crimson;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .nav-button:hover {
+      background-color: #a40000;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Media and Transparency in Kenyan Government</h1>
+    <p>
+      The media plays a vital role in keeping the government accountable and ensuring transparency in the decision-making process. By investigating, reporting, and scrutinizing government policies and actions, the media serves as a watchdog, empowering citizens to make informed decisions and hold their leaders responsible.
+    </p>
+
+    <h2>Media's Role in Government Accountability</h2>
+    <p>
+      The Kenyan media landscape is diverse, with a range of independent print, broadcast, and digital news outlets. These media organizations often investigate government activities, expose corruption, and provide a platform for public discourse on important issues. By holding the government accountable, the media helps ensure that the interests of the people are being served.
+    </p>
+
+    <h2>Explore Media Coverage</h2>
+    <p>
+      Browse through a selection of news articles, interviews, and investigative reports on government policies and actions in Kenya:
+    </p>
+
+    <div class="media-gallery">
+      <div class="media-item" onclick="showMediaModal(this)">
+        <img src="govenment-spending-1024x683.webp" alt="News Article">
+        <h3>Government Spending Scrutinized</h3>
+        <p>Investigative report on alleged misuse of public funds.</p>
+      </div>
+      <div class="media-item" onclick="showMediaModal(this)">
+        <img src="meet.jpg" alt="Interview">
+        <h3>Interview with Opposition Leader</h3>
+        <p>Exclusive interview on proposed policy changes.</p>
+      </div>
+      <div class="media-item" onclick="showMediaModal(this)">
+        <img src="nepotism.jpg" alt="Investigative Report">
+        <h3>Uncovering Nepotism in Government</h3>
+        <p>In-depth investigation into hiring practices.</p>
+      </div>
+      <div class="media-item" onclick="showMediaModal(this)">
+        <img src="transparency.png" alt="News Article">
+        <h3>Government Transparency Initiatives</h3>
+        <p>Report on new efforts to improve public access to information.</p>
+      </div>
+    </div>
+
+    <div class="media-modal">
+      <div class="media-modal-content">
+        <span class="close-button" onclick="hideMediaModal()">&times;</span>
+        <!-- Modal content will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <a href=https://en.wikipedia.org/wiki/Government_of_Kenya class="nav-button">Read More</a>
+      <a href=https://docs.google.com/forms/d/e/1FAIpQLScAsMk9IPAf0lEn2rqG0-oApOUzV1XLLz6KN5S4pl0WyK7VqQ/viewform?usp=sf_link class="nav-button">Provide Feedback</a>
+    </div>
+  </div>
+
+  <script>
+    function showMediaModal(item) {
+      var modal = document.querySelector('.media-modal');
+      var modalContent = document.querySelector('.media-modal-content');
+
+      // Populate the modal content with the clicked item's information
+      modalContent.innerHTML = item.innerHTML;
+
+      modal.style.display = 'block';
+    }
+
+    function hideMediaModal() {
+      var modal = document.querySelector('.media-modal');
+      modal.style.display = 'none';
+    }
+  </script>
+</body>
+</html>
