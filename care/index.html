@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrustCare - Compassionate Healthcare Services</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+    }
+
+    /* Hero Section Styles */
+    .hero {
+      height: 100vh; /* Full viewport height */
+      background: url('home.png') no-repeat center center/cover; /* Background image */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff; /* Text color */
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #007BFF; /* Button color */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .hero button:hover {
+      background-color: #0056b3; /* Hover effect */
+    }
+
+    /* Section Styles */
+    section {
+      padding: 40px 20px;
+    }
+
+    .services {
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .services p {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .testimonials, .providers {
+      background-color: #f9f9f9; /* Light gray background */
+      text-align: center;
+    }
+
+    .testimonials h2, .providers h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .testimonials blockquote {
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333; /* Dark footer */
+      color: #fff; /* White text */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to TrustCare</h1>
+    <p>At TrustCare, we believe in providing compassionate healthcare services tailored to your needs.</p>
+    <button onclick="location.href='#services'">Explore Our Services</button>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <p>Connect with certified psychologists for mental health support in the comfort of your home. We provide round-the-clock emergency medical transport, professional nursing care, expert physiotherapy, and compassionate caregiving services. Have you been diagnosed with cancer? We walk you through the journey.</p>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Patients Say</h2>
+    <blockquote>"TrustCare has transformed my healthcare experience. The providers are attentive, caring, and truly listen to my concerns."</blockquote>
+    <blockquote>"As someone with a chronic condition, finding consistent care was challenging until I discovered TrustCare. Now I have a team that understands my needs."</blockquote>
+    <blockquote>"The virtual appointment option has been a lifesaver for my busy schedule. Professional care without the hassle of travel!"</blockquote>
+  </section>
+
+  <!-- Providers Section -->
+  <section class="providers">
+    <h2>Join Our Network</h2>
+    <p>Join our network of trusted healthcare professionals and make a difference in the lives of patients who need your expertise.</p>
+    <button onclick="location.href='#register'">Register as a Service Provider</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; <?php echo date('Y'); ?> TrustCare. All rights reserved.
+  </footer>
+
+</body>
+</html>

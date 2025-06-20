@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivo Cakes - Order Page</title>
+    <style>
+        /* Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #e6f2ff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .header h1 {
+            color: #1a5f7a;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        /* Search and Cart */
+        .search-cart-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .search-input {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid #4dabf7;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #ff6b6b;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+        }
+
+        /* Cake Grid */
+        .cake-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .cake-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .cake-card:hover {
+            transform: scale(1.05);
+        }
+
+        .cake-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .cake-details {
+            padding: 15px;
+        }
+
+        .cake-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #1a5f7a;
+            margin-bottom: 10px;
+        }
+
+        .cake-price {
+            color: #4dabf7;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .cake-rating {
+            color: #ffd700;
+            margin-top: 5px;
+        }
+
+        .cake-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #4dabf7;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #1a5f7a;
+        }
+
+        .btn-details {
+            background-color: #e6f2ff;
+            color: #1a5f7a;
+        }
+
+        .btn-details:hover {
+            background-color: #d0e6f5;
+        }
+
+        .btn-back {
+            margin-top: 20px;
+            background-color: #e6f2ff;
+            color: #1a5f7a;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #d0e6f5;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal h2 {
+            color: #1a5f7a;
+            margin-bottom: 15px;
+        }
+
+        .modal p {
+            margin-bottom: 20px;
+        }
+
+        .modal .btn-close {
+            background-color: #ff6b6b;
+            color: white;
+        }
+
+        .modal .btn-close:hover {
+            background-color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Vivo Cakes</h1>
+            <div class="search-cart-section">
+                <input type="text" placeholder="Search cakes..." class="search-input">
+                <div class="cart-icon">
+                    <span>🛒</span>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="cake-grid">
+            <!-- Cake 1 -->
+            <div class="cake-card">
+                <img src="vanilla.jpg" alt="Classic Vanilla Delight" class="cake-image">
+                <div class="cake-details">
+                    <div class="cake-name">Classic Vanilla Delight</div>
+                    <div class="cake-price">KES 5,200</div>
+                    <div class="cake-rating">★★★★½</div>
+                    <div class="cake-actions">
+                        <button class="btn btn-primary">Add to Cart</button>
+                        <button class="btn btn-details" onclick="openModal('Classic Vanilla Delight', 'A classic vanilla cake with creamy frosting, perfect for any occasion!', 'KES 5,200')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cake 2 -->
+            <div class="cake-card">
+                <img src="choclate.jpg" alt="Chocolate Lover's Dream" class="cake-image">
+                <div class="cake-details">
+                    <div class="cake-name">Chocolate Lover's Dream</div>
+                    <div class="cake-price">KES 5,800</div>
+                    <div class="cake-rating">★★★★¾</div>
+                    <div class="cake-actions">
+                        <button class="btn btn-primary">Add to Cart</button>
+                        <button class="btn btn-details" onclick="openModal('Chocolate Lover\'s Dream', 'Rich and moist chocolate cake topped with decadent ganache.', 'KES 5,800')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cake 3 -->
+            <div class="cake-card">
+                <img src="strawberry.jpg" alt="Strawberry Sensation" class="cake-image">
+                <div class="cake-details">
+                    <div class="cake-name">Strawberry Sensation</div>
+                    <div class="cake-price">KES 6,300</div>
+                    <div class="cake-rating">★★★★½</div>
+                    <div class="cake-actions">
+                        <button class="btn btn-primary">Add to Cart</button>
+                        <button class="btn btn-details" onclick="openModal('Strawberry Sensation', 'Delicious strawberry cake layered with real fruit and cream.', 'KES 6,300')">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modal -->
+        <div class="modal" id="cakeModal">
+            <div class="modal-content">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <div class="cake-price" id="modalPrice"></div>
+                <div class="cake-actions">
+                    <button class="btn btn-primary">Pay Now</button>
+                    <button class="btn btn-close" onclick="closeModal()">Close</button>
+                </div>
+                <button class="btn btn-back" onclick="closeModal()">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, description, price) {
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalDescription').textContent = description;
+            document.getElementById('modalPrice').textContent = price;
+            document.getElementById('cakeModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('cakeModal').style.display = 'none

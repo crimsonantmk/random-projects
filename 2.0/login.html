@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Vivo Cakes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #d1e0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 60px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .login-container h2 {
+            text-align: center;
+            color: #1a4a8d;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #1a4a8d;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #1a4a8d;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #1a4a8d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #0d2a4d;
+        }
+        .signup-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .signup-link a {
+            color: #1a4a8d;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login to Vivo Cakes</h2>
+        <form method="POST" action="login.php">         
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password</label>
+                <input type="password" id="pwd" name="pwd" required>
+            </div>
+            <button type="submit" name="login" class="submit-btn">Login</button>
+        </form>
+        <div class="signup-link">
+            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+    </div>
+</body>
+</html>

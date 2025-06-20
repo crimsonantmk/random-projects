@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Dashboard - Book Appointment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f0ff;
+            color: #003366;
+            padding: 20px;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0px 4px 8px rgba(0, 51, 102, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #003366;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 10px;
+            border: 1px solid #b3d1ff;
+            border-radius: 5px;
+            margin-top: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #0052cc;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #003d99;
+        }
+
+        .success {
+            color: green;
+            margin-top: 10px;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Book an Appointment</h2>
+        <form action="appointment.php" method="POST">
+            <label for="patient_id">Patient ID:</label>
+            <input type="number" name="patient_id" id="patient_id" required>
+
+            <label for="provider_id">Provider ID:</label>
+            <input type="number" name="provider_id" id="provider_id" required>
+
+            <label for="appointment_date">Appointment Date:</label>
+            <input type="datetime-local" name="appointment_date" id="appointment_date" required>
+
+            <label for="status">Status:</label>
+            <select name="status" id="status">
+                <option value="scheduled">Scheduled</option>
+                <option value="completed">Completed</option>
+                <option value="cancelled">Cancelled</option>
+            </select>
+
+            <label for="notes">Notes:</label>
+            <textarea name="notes" id="notes" rows="4"></textarea>
+
+            <button type="submit">Submit Appointment</button>
+        </form>
+    </div>
+</body>
+
+</html>
